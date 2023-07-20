@@ -1,0 +1,2 @@
+192.168.95.128	centos6-1.macro.com	centos6-1
+192.168.95.129	centos6-2.macro.com	centos6-2
