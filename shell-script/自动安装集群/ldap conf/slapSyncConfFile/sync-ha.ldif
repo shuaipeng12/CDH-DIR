@@ -1,0 +1,29 @@
+
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcSyncRepl
+olcSyncRepl: rid=001
+             provider=ldap://hadoop101
+             bindmethod=simple
+             binddn="cn=Manager,dc=fayson,dc=com"
+             credentials=123456
+             searchbase="dc=fayson,dc=com"
+             scope=sub
+             schemachecking=on
+             type=refreshAndPersist
+             retry="30 5 300 3"
+             interval=00:00:05:0
+olcSyncrepl:  rid=002
+              provider=ldap://hadoop102
+              bindmethod=simple
+              binddn="cn=Manager,dc=fayson,dc=com"
+              credentials=123456
+              searchbase="dc=fayson,dc=com"
+              scope=sub
+              schemachecking=on
+              type=refreshAndPersist
+              retry="30 5 300 3"
+              interval=00:00:05:00
+-
+add: olcMirrorMode
+olcMirrorMode: TRUE

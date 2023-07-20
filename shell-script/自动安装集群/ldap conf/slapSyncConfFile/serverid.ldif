@@ -1,0 +1,5 @@
+dn: cn=config
+changetype: modify
+replace: olcServerId
+olcServerId: 1 ldap://hadoop101
+olcServerId: 2 ldap://hadoop102
