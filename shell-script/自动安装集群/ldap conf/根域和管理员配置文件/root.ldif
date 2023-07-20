@@ -1,0 +1,9 @@
+
+dn: dc=fayson,dc=com
+dc: fayson
+objectClass: top
+objectClass: domain
+
+dn: cn=Manager,dc=fayson,dc=com
+objectClass: organizationalRole
+cn: Manager

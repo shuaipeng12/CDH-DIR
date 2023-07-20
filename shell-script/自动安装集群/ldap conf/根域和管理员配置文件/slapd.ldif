@@ -1,0 +1,78 @@
+#
+# See slapd-config(5) for details on configuration options.
+# This file should NOT be world readable.
+#
+
+dn: cn=config
+objectClass: olcGlobal
+cn: config
+olcArgsFile: /var/run/openldap/slapd.args
+olcPidFile: /var/run/openldap/slapd.pid
+#
+# TLS settings
+#
+olcTLSCACertificatePath: /etc/openldap/certs
+olcTLSCertificateFile: /etc/openldap/certs/ldap.crt
+olcTLSCertificateKeyFile: /etc/openldap/certs/ldap.key
+#
+# Schema settings
+
+dn: cn=schema,cn=config
+objectClass: olcSchemaConfig
+cn: schema
+
+include: file:///etc/openldap/schema/corba.ldif
+include: file:///etc/openldap/schema/core.ldif
+include: file:///etc/openldap/schema/cosine.ldif
+include: file:///etc/openldap/schema/duaconf.ldif
+include: file:///etc/openldap/schema/dyngroup.ldif
+include: file:///etc/openldap/schema/inetorgperson.ldif
+include: file:///etc/openldap/schema/java.ldif
+include: file:///etc/openldap/schema/misc.ldif
+include: file:///etc/openldap/schema/nis.ldif
+include: file:///etc/openldap/schema/openldap.ldif
+include: file:///etc/openldap/schema/ppolicy.ldif
+include: file:///etc/openldap/schema/collective.ldif
+
+#
+# Frontend settings
+#
+
+dn: olcDatabase=frontend,cn=config
+objectClass: olcDatabaseConfig
+objectClass: olcFrontendConfig
+olcDatabase: frontend
+#
+#configuration database
+
+dn: olcDatabase=config,cn=config
+objectClass: olcDatabaseConfig
+olcDatabase: config
+olcAccess: to * by dn.base="gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth" manage by * none
+
+#
+# Server status monitoring
+#
+
+dn: olcDatabase=monitor,cn=config
+objectClass: olcDatabaseConfig
+olcDatabase: monitor
+olcAccess: to * by dn.base="gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth" read by dn.base="cn=Manager,dc=fayson,dc=com" read by * none
+
+#
+# Backend database definitions
+#
+
+dn: olcDatabase=hdb,cn=config
+objectClass: olcDatabaseConfig
+objectClass: olcHdbConfig
+olcDatabase: hdb
+olcSuffix: dc=fayson,dc=com
+olcRootDN: cn=Manager,dc=fayson,dc=com
+olcRootPW: 123456
+olcDbDirectory:	/var/lib/ldap
+olcDbIndex: objectClass eq,pres
+olcDbIndex: ou,cn,mail,surname,givenname eq,pres,sub
+olcDbIndex: uidNumber,gidNumber,loginShell eq,pres
+olcDbIndex: uid,memberUid eq,pres,sub
+olcDbIndex: nisMapName,nisMapEntry eq,pres,sub
