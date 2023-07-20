@@ -1,0 +1,416 @@
+# extended LDIF
+#
+# LDAPv3
+# base <cn=users,cn=accounts,dc=sp,dc=com> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# users, accounts, sp.com
+dn: cn=users,cn=accounts,dc=sp,dc=com
+objectClass: top
+objectClass: nsContainer
+cn: users
+
+# admin, users, accounts, sp.com
+dn: uid=admin,cn=users,cn=accounts,dc=sp,dc=com
+objectClass: top
+objectClass: person
+objectClass: posixaccount
+objectClass: krbprincipalaux
+objectClass: krbticketpolicyaux
+objectClass: inetuser
+objectClass: ipaobject
+objectClass: ipasshuser
+objectClass: ipaSshGroupOfPubKeys
+uid: admin
+krbPrincipalName: admin@SP.COM
+cn: Administrator
+sn: Administrator
+uidNumber: 5000
+gidNumber: 5000
+homeDirectory: /home/admin
+loginShell: /bin/bash
+gecos: Administrator
+ipaUniqueID: eb62c0c2-0cce-11ed-8b7a-00505684bdc6
+memberOf: cn=admins,cn=groups,cn=accounts,dc=sp,dc=com
+memberOf: cn=Replication Administrators,cn=privileges,cn=pbac,dc=sp,dc=com
+memberOf: cn=Add Replication Agreements,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=Modify Replication Agreements,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=Read Replication Agreements,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=Remove Replication Agreements,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=Modify DNA Range,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=Read PassSync Managers Configuration,cn=permissions,cn=pbac,dc=sp
+ ,dc=com
+memberOf: cn=Modify PassSync Managers Configuration,cn=permissions,cn=pbac,dc=
+ sp,dc=com
+memberOf: cn=Read LDBM Database Configuration,cn=permissions,cn=pbac,dc=sp,dc=
+ com
+memberOf: cn=Add Configuration Sub-Entries,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=Read DNA Range,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=Host Enrollment,cn=privileges,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Add krbPrincipalName to a Host,cn=permissions,cn=pbac,dc=
+ sp,dc=com
+memberOf: cn=System: Enroll a Host,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Manage Host Certificates,cn=permissions,cn=pbac,dc=sp,dc=
+ com
+memberOf: cn=System: Manage Host Enrollment Password,cn=permissions,cn=pbac,dc
+ =sp,dc=com
+memberOf: cn=System: Manage Host Keytab,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Manage Host Principals,cn=permissions,cn=pbac,dc=sp,dc=co
+ m
+memberOf: cn=User Administrator,cn=roles,cn=accounts,dc=sp,dc=com
+memberOf: cn=User Administrators,cn=privileges,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Add User to default group,cn=permissions,cn=pbac,dc=sp,dc
+ =com
+memberOf: cn=System: Add Users,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Change User password,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Manage User Certificates,cn=permissions,cn=pbac,dc=sp,dc=
+ com
+memberOf: cn=System: Manage User Principals,cn=permissions,cn=pbac,dc=sp,dc=co
+ m
+memberOf: cn=System: Manage User SSH Public Keys,cn=permissions,cn=pbac,dc=sp,
+ dc=com
+memberOf: cn=System: Modify Users,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Read UPG Definition,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Read User Kerberos Login Attributes,cn=permissions,cn=pba
+ c,dc=sp,dc=com
+memberOf: cn=System: Remove Users,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Unlock User,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=Group Administrators,cn=privileges,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Add Groups,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Modify External Group Membership,cn=permissions,cn=pbac,d
+ c=sp,dc=com
+memberOf: cn=System: Modify Group Membership,cn=permissions,cn=pbac,dc=sp,dc=c
+ om
+memberOf: cn=System: Modify Groups,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Remove Groups,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=Stage User Administrators,cn=privileges,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Add Stage User,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Modify Preserved Users,cn=permissions,cn=pbac,dc=sp,dc=co
+ m
+memberOf: cn=System: Modify Stage User,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Modify User RDN,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Preserve User,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Read Preserved Users,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Read Stage User password,cn=permissions,cn=pbac,dc=sp,dc=
+ com
+memberOf: cn=System: Read Stage Users,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Remove Stage User,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Remove preserved User,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Reset Preserved User password,cn=permissions,cn=pbac,dc=s
+ p,dc=com
+memberOf: cn=System: Undelete User,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=trust admins,cn=groups,cn=accounts,dc=sp,dc=com
+memberOf: cn=cmadminrole,cn=roles,cn=accounts,dc=sp,dc=com
+memberOf: cn=Service Administrators,cn=privileges,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Add Services,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Manage Service Keytab,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Manage Service Keytab Permissions,cn=permissions,cn=pbac,
+ dc=sp,dc=com
+memberOf: cn=System: Manage Service Principals,cn=permissions,cn=pbac,dc=sp,dc
+ =com
+memberOf: cn=System: Modify Services,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Remove Services,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Add Service Delegations,cn=permissions,cn=pbac,dc=sp,dc=c
+ om
+memberOf: cn=System: Modify Service Delegation Membership,cn=permissions,cn=pb
+ ac,dc=sp,dc=com
+memberOf: cn=System: Read Service Delegations,cn=permissions,cn=pbac,dc=sp,dc=
+ com
+memberOf: cn=System: Remove Service Delegations,cn=permissions,cn=pbac,dc=sp,d
+ c=com
+krbPrincipalKey:: MIHeoAMCAQGhAwIBAaIDAgEBowMCAQGkgccwgcQwaKAbMBmgAwIBBKESBBBV
+ KVA0NGtMPl1ZIyRSfFdPoUkwR6ADAgESoUAEPiAAtgSUh0mGzHOGkatvRxgMARSfyis2XTmE+LPbh
+ 800DWWy7DTxWmgGb3kofEAfktk2CNH1bq1mR6gmrK/KMFigGzAZoAMCAQShEgQQRztDMSR5SyB7L3
+ NhVVc1TaE5MDegAwIBEaEwBC4QAMsXiDGvy3PctVNMtZPMAJXlir4H5RbBv0jfx4B0pXe3o2Aeb+g
+ rOZO2haej
+krbLastPwdChange: 20220726104352Z
+krbPasswordExpiration: 20221024104352Z
+userPassword:: e1NTSEE1MTJ9SC9EQkNrdUdHRUh2UnhORDlLVHFIOVdpUFdUYUphaHpZSk5uSUl
+ jMFI5UlI0MXAwczliSmtjQ2ZnZm53Q2ZwR3BYUXhZSXFGWGJudjhGeVNEY0dMWXYxdk5hUmRwbXlJ
+krbExtraData:: AAJoxd9icm9vdC9hZG1pbkBTUC5DT00A
+krbLastFailedAuth: 20220727093159Z
+krbLoginFailedCount: 0
+
+# cmadmin-60c51b9b, users, accounts, sp.com
+dn: uid=cmadmin-60c51b9b,cn=users,cn=accounts,dc=sp,dc=com
+displayName: cmadmin-60c51b9b Admin
+uid: cmadmin-60c51b9b
+krbCanonicalName: cmadmin-60c51b9b@SP.COM
+objectClass: top
+objectClass: person
+objectClass: organizationalperson
+objectClass: inetorgperson
+objectClass: inetuser
+objectClass: posixaccount
+objectClass: krbprincipalaux
+objectClass: krbticketpolicyaux
+objectClass: ipaobject
+objectClass: ipasshuser
+objectClass: ipaSshGroupOfPubKeys
+objectClass: mepOriginEntry
+loginShell: /bin/sh
+initials: cA
+gecos: cmadmin-60c51b9b Admin
+sn: Admin
+homeDirectory: /home/cmadmin-60c51b9b
+mail: cmadmin-60c51b9b@sp.com
+krbPrincipalName: cmadmin-60c51b9b@SP.COM
+givenName: cmadmin-60c51b9b
+cn: cmadmin-60c51b9b Admin
+ipaUniqueID: ffe8efa4-0d8b-11ed-b712-00505684bdc6
+uidNumber: 5003
+gidNumber: 5003
+mepManagedEntry: cn=cmadmin-60c51b9b,cn=groups,cn=accounts,dc=sp,dc=com
+memberOf: cn=ipausers,cn=groups,cn=accounts,dc=sp,dc=com
+memberOf: cn=cmadminrole,cn=roles,cn=accounts,dc=sp,dc=com
+memberOf: cn=Service Administrators,cn=privileges,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Add Services,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Manage Service Keytab,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Manage Service Keytab Permissions,cn=permissions,cn=pbac,
+ dc=sp,dc=com
+memberOf: cn=System: Manage Service Principals,cn=permissions,cn=pbac,dc=sp,dc
+ =com
+memberOf: cn=System: Modify Services,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Remove Services,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Add Service Delegations,cn=permissions,cn=pbac,dc=sp,dc=c
+ om
+memberOf: cn=System: Modify Service Delegation Membership,cn=permissions,cn=pb
+ ac,dc=sp,dc=com
+memberOf: cn=System: Read Service Delegations,cn=permissions,cn=pbac,dc=sp,dc=
+ com
+memberOf: cn=System: Remove Service Delegations,cn=permissions,cn=pbac,dc=sp,d
+ c=com
+krbPrincipalKey:: MIHeoAMCAQGhAwIBAaIDAgEBowMCAQGkgccwgcQwaKAbMBmgAwIBBKESBBBx
+ QnQze0ZsbDBjWiM1Q3pQoUkwR6ADAgESoUAEPiAA/I8C8xtad5hwhCf8oOvjoZsiGwf2nVOTPgf7D
+ mTeUBkVAEESmXmBfaewyUmWQGw0SxmQaNlzntBJNj5bMFigGzAZoAMCAQShEgQQSXZhNHY0b0kvST
+ R3MkhwXqE5MDegAwIBEaEwBC4QAPDKHTCq91AFOI1Vgoascyej7amUfsXQShfyOWO8I7wMNwgdSMJ
+ bjvehLEa6
+krbLastPwdChange: 20220727091048Z
+krbExtraData:: AAIYAeFiY21hZG1pbi02MGM1MWI5YkBTUC5DT00A
+
+# hive, users, accounts, sp.com
+dn: uid=hive,cn=users,cn=accounts,dc=sp,dc=com
+displayName: hueadmin hueadmin
+uid: hive
+krbCanonicalName: hive@SP.COM
+objectClass: top
+objectClass: person
+objectClass: organizationalperson
+objectClass: inetorgperson
+objectClass: inetuser
+objectClass: posixaccount
+objectClass: krbprincipalaux
+objectClass: krbticketpolicyaux
+objectClass: ipaobject
+objectClass: ipasshuser
+objectClass: ipaSshGroupOfPubKeys
+objectClass: mepOriginEntry
+loginShell: /bin/sh
+initials: hh
+gecos: hueadmin hueadmin
+sn: hueadmin
+homeDirectory: /home/hive
+mail: hive@sp.com
+krbPrincipalName: hive@SP.COM
+givenName: hueadmin
+cn: hueadmin hueadmin
+userPassword:: e1NTSEE1MTJ9QWhrZ1ZXcEdHZUhoVUVyT040ZEcrRVJIQnppaG9GVFluWnB0RC9
+ DTGRQWFJjbE9XQlpJRWRhaDU0MjlHQ0cxbTVVZjB2b1hNR3hVOVJWcjNNZmNJNyt1b0xnd2p0ZVdu
+ipaUniqueID: ecdf1f0a-0d90-11ed-9810-00505684bdc6
+krbPrincipalKey:: MIHeoAMCAQGhAwIBAaIDAgEBowMCAQGkgccwgcQwaKAbMBmgAwIBBKESBBA0
+ I154OEUnRnBPaVBcWnItoUkwR6ADAgESoUAEPiAA6kgs39dpbQq+OZPCrAkaoMOOREaMPI5Pv6i+X
+ XoaQJNUmmrkZq4rYGipEL5zT3yFeBznh85Q+8ZAMoaHMFigGzAZoAMCAQShEgQQOThvP19NSyQmV1
+ ptNjRzSKE5MDegAwIBEaEwBC4QAMJk+J1Qe/zI+Y6zfDHB5WrMPKGbnwCbiTSDUH0jBH35Yp94qPo
+ 00GqTDyrq
+uidNumber: 5004
+gidNumber: 5004
+krbPasswordExpiration: 20220727094600Z
+krbLastPwdChange: 20220727094600Z
+krbExtraData:: AAJYCeFicm9vdC9hZG1pbkBTUC5DT00A
+mepManagedEntry: cn=hive,cn=groups,cn=accounts,dc=sp,dc=com
+memberOf: cn=ipausers,cn=groups,cn=accounts,dc=sp,dc=com
+krbLastFailedAuth: 20220803032913Z
+krbLoginFailedCount: 1
+
+# hdfs, users, accounts, sp.com
+dn: uid=hdfs,cn=users,cn=accounts,dc=sp,dc=com
+displayName: hdfsadmin hdfsadmin
+uid: hdfs
+krbCanonicalName: hdfs@SP.COM
+objectClass: top
+objectClass: person
+objectClass: organizationalperson
+objectClass: inetorgperson
+objectClass: inetuser
+objectClass: posixaccount
+objectClass: krbprincipalaux
+objectClass: krbticketpolicyaux
+objectClass: ipaobject
+objectClass: ipasshuser
+objectClass: ipaSshGroupOfPubKeys
+objectClass: mepOriginEntry
+loginShell: /bin/sh
+initials: hh
+gecos: hdfsadmin hdfsadmin
+sn: hdfsadmin
+homeDirectory: /home/hdfs
+mail: hdfs@sp.com
+krbPrincipalName: hdfs@SP.COM
+givenName: hdfsadmin
+cn: hdfsadmin hdfsadmin
+userPassword:: e1NTSEE1MTJ9Mi9jSFpCMWc4bmo4dE9JMzlXNTBaN1ljdDN0QjhzRjJnMUM1OGt
+ oTUh0VW5qRXR5SnlJZnc4b2dORHZwUG4wSFdPR2lWTWtRNUFTeFg2UG9EcnMxYStBZmt2Rm8zWjRY
+ipaUniqueID: 9ac72438-0eee-11ed-9c45-00505684bdc6
+krbPrincipalKey:: MIHeoAMCAQGhAwIBAaIDAgECowMCAQGkgccwgcQwaKAbMBmgAwIBBKESBBA9
+ I1BOcz85byJYImNtcG5KoUkwR6ADAgESoUAEPiAAH8yykpqCRlmYpWV7oshogqutaZef34io72xE0
+ JJWIXKh9GGcXHyeH7jQHZiH4cPVC8Xsfr/b5hIH0P47MFigGzAZoAMCAQShEgQQWEwxSFlHK0k/Zz
+ JjWjptLaE5MDegAwIBEaEwBC4QAPrk8CikLlMIVfDxXyMijC5Mz5WfmTfGwFy5aEy/yhhMMtd17Y/
+ wzrx/Ph7d
+uidNumber: 5005
+gidNumber: 5005
+krbPasswordExpiration: 20221027032935Z
+krbLastPwdChange: 20220729032935Z
+krbExtraData:: AAIfVONia2FkbWluZEBTUC5DT00A
+mepManagedEntry: cn=hdfs,cn=groups,cn=accounts,dc=sp,dc=com
+memberOf: cn=ipausers,cn=groups,cn=accounts,dc=sp,dc=com
+krbTicketFlags: 128
+krbLoginFailedCount: 0
+
+# test, users, accounts, sp.com
+dn: uid=test,cn=users,cn=accounts,dc=sp,dc=com
+displayName: test test
+uid: test
+krbCanonicalName: test@SP.COM
+objectClass: top
+objectClass: person
+objectClass: organizationalperson
+objectClass: inetorgperson
+objectClass: inetuser
+objectClass: posixaccount
+objectClass: krbprincipalaux
+objectClass: krbticketpolicyaux
+objectClass: ipaobject
+objectClass: ipasshuser
+objectClass: ipaSshGroupOfPubKeys
+objectClass: mepOriginEntry
+loginShell: /bin/sh
+initials: tt
+gecos: test test
+sn: test
+homeDirectory: /home/test
+mail: test@sp.com
+krbPrincipalName: test@SP.COM
+givenName: test
+cn: test test
+userPassword:: e1NTSEE1MTJ9Ui91aXdsanZLQm80RnpwVTVhdmpkd1VCczQ2QUZqQm1CZ0NGdlB
+ TZWhSMXJXR3VRT2ExNWl5VTJ2enF5UXI2djJkUExnM3ovdy9qb1gxQ1dxQk1vMmhEUmt1dUt5U2ho
+ipaUniqueID: f7c7fab2-1b92-11ed-9810-00505684bdc6
+krbPrincipalKey:: MIHeoAMCAQGhAwIBAaIDAgEBowMCAQGkgccwgcQwaKAbMBmgAwIBBKESBBBy
+ Wk9DNno7aUh5IEg5RnRhoUkwR6ADAgESoUAEPiAA3GmTOauOEwD5YkXCIJNFwcYfkwHC1y8PMaRh9
+ afiM4nO8YgXbXo537ck+uOTc1NyW3oq2WYDHJRFzdNnMFigGzAZoAMCAQShEgQQXSw2LTJCPU9NMS
+ 4oaVMsQKE5MDegAwIBEaEwBC4QAABhTBqC37a5LDY6ItHoXyj+S7egHKm4+ugk9ajHg3BAW0aKq3n
+ acPSNjyS0
+uidNumber: 1376400000
+gidNumber: 1376400000
+krbPasswordExpiration: 20220814053554Z
+krbLastPwdChange: 20220814053554Z
+krbExtraData:: AAK6ifhicm9vdC9hZG1pbkBTUC5DT00A
+mepManagedEntry: cn=test,cn=groups,cn=accounts,dc=sp,dc=com
+memberOf: cn=ipausers,cn=groups,cn=accounts,dc=sp,dc=com
+
+# shuai, users, accounts, sp.com
+dn: uid=shuai,cn=users,cn=accounts,dc=sp,dc=com
+displayName: shuai shuai
+uid: shuai
+krbCanonicalName: shuai@SP.COM
+objectClass: top
+objectClass: person
+objectClass: organizationalperson
+objectClass: inetorgperson
+objectClass: inetuser
+objectClass: posixaccount
+objectClass: krbprincipalaux
+objectClass: krbticketpolicyaux
+objectClass: ipaobject
+objectClass: ipasshuser
+objectClass: ipaSshGroupOfPubKeys
+objectClass: mepOriginEntry
+loginShell: /bin/sh
+initials: ss
+gecos: shuai shuai
+sn: shuai
+homeDirectory: /home/shuai
+mail: shuai@sp.com
+krbPrincipalName: shuai@SP.COM
+givenName: shuai
+cn: shuai shuai
+userPassword:: e1NTSEE1MTJ9d2JhU1ExZmFPejAyY3huc3hNUDZIaVJVeGZUK0RoaU8xelhJWnN
+ NZVBkNmFBRzArQkdZNjBPd3hOUXpFaVZBYWxKZGZ6NFBiZUVoaE93TGlYaS9pdVpYQ2VzMEUzRS8x
+ipaUniqueID: 120235f0-1b93-11ed-9dd2-00505684bdc6
+krbPrincipalKey:: MIHeoAMCAQGhAwIBAaIDAgECowMCAQGkgccwgcQwaKAbMBmgAwIBBKESBBBM
+ VGZiI2JLUDxxNV9hLUhYoUkwR6ADAgESoUAEPiAAbtVkGepxP1bTwk2b/Hn0eF1z+Uytk/1DznVHU
+ tz7AgNwy+1EIonhQ0rbSEHueQwXDks8yvnBRbiO8ymVMFigGzAZoAMCAQShEgQQbTszW1IqTCV6KE
+ pJVkdtQ6E5MDegAwIBEaEwBC4QAHyvq0wiFxaGSsJWKGBxHItvwK0YBY85lleb71I4nIkSaXSCcmh
+ AC/yTX/Mk
+uidNumber: 1376400001
+gidNumber: 1376400001
+krbPasswordExpiration: 20221121062552Z
+krbLastPwdChange: 20220823062552Z
+krbExtraData:: AALwcgRja2FkbWluZEBTUC5DT00A
+mepManagedEntry: cn=shuai,cn=groups,cn=accounts,dc=sp,dc=com
+memberOf: cn=ipausers,cn=groups,cn=accounts,dc=sp,dc=com
+krbTicketFlags: 128
+krbLoginFailedCount: 0
+
+# ldapuser1, users, accounts, sp.com
+dn: uid=ldapuser1,cn=users,cn=accounts,dc=sp,dc=com
+displayName: ldap ldap
+uid: ldapuser1
+krbCanonicalName: ldapuser1@SP.COM
+objectClass: top
+objectClass: person
+objectClass: organizationalperson
+objectClass: inetorgperson
+objectClass: inetuser
+objectClass: posixaccount
+objectClass: krbprincipalaux
+objectClass: krbticketpolicyaux
+objectClass: ipaobject
+objectClass: ipasshuser
+objectClass: ipaSshGroupOfPubKeys
+objectClass: mepOriginEntry
+loginShell: /bin/sh
+initials: ll
+gecos: ldap ldap
+sn: ldap
+homeDirectory: /home/ldapuser1
+mail: ldapuser1@sp.com
+krbPrincipalName: ldapuser1@SP.COM
+givenName: ldap
+cn: ldap ldap
+userPassword:: e1NTSEE1MTJ9QXI0eFpwT1dndEFJT3o4NXA5M0pnMkQrWkJ6MytmbEw5bGJhQVM
+ 1SUNPTlhMKzFIN05yN1VxQkpNZjRIV2RQcmhkUVg2OThJK3JWd0VRVEtMdXp2ckQvbk1jc3FIcE03
+ipaUniqueID: d45850e4-1c7e-11ed-b11c-00505684bdc6
+krbPrincipalKey:: MIHeoAMCAQGhAwIBAaIDAgECowMCAQGkgccwgcQwaKAbMBmgAwIBBKESBBBn
+ KDp9R2tYKUBoOUguQWs4oUkwR6ADAgESoUAEPiAAfjdml5K2vlLInaRXuyNTY/FgVp9HV+zBO+Ca4
+ j0CAZiZd2q+hSaDfsfK0ybG5qAF4QIRDT3wok94F5hVMFigGzAZoAMCAQShEgQQOiEucDU1VGN7KS
+ VtQSRLWaE5MDegAwIBEaEwBC4QAJteYDmNE3q+mFwbacBxYz0UYnI2+/SHb1UcxtvPB5kbrOwQ+zV
+ FOz77eKK8
+uidNumber: 5008
+gidNumber: 5008
+krbPasswordExpiration: 20221113094452Z
+krbLastPwdChange: 20220815094452Z
+krbExtraData:: AAKUFfpia2FkbWluZEBTUC5DT00A
+mepManagedEntry: cn=ldapuser1,cn=groups,cn=accounts,dc=sp,dc=com
+memberOf: cn=ipausers,cn=groups,cn=accounts,dc=sp,dc=com
+krbTicketFlags: 128
+krbLoginFailedCount: 0
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 9
+# numEntries: 8
