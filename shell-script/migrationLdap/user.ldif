@@ -1,0 +1,284 @@
+
+dn: uid=admin,ou=People,dc=sp,dc=com
+uid: admin
+cn: Administrator
+sn: Administrator
+objectClass: person
+objectClass: posixAccount
+objectclass: iNetOrgPerson
+objectClass: top
+objectClass: shadowAccount
+userPassword: e1NTSEE1MTJ9SC9EQkNrdUdHRUh2UnhORDlLVHFIOVdpUFdUYUphaHpZSk5uSUl
+shadowLastChange: 17566
+shadowMin: 0
+shadowMax: 99999
+shadowWarning: 7
+loginShell: /bin/bash
+uidNumber: 5000
+gidNumber: 5000
+homeDirectory: /home/admin
+gecos: Administrator
+
+
+
+
+dn: uid=cmadmin-60c51b9b,ou=People,dc=sp,dc=com
+uid: cmadmin-60c51b9b
+cn: cmadmin-60c51b9b Admin
+sn: Admin
+objectClass: person
+objectClass: posixAccount
+objectclass: iNetOrgPerson
+objectClass: top
+objectClass: shadowAccount
+shadowLastChange: 17566
+shadowMin: 0
+shadowMax: 99999
+shadowWarning: 7
+loginShell: /bin/sh
+uidNumber: 5003
+gidNumber: 5003
+mail: cmadmin-60c51b9b@sp.com
+homeDirectory: /home/cmadmin-60c51b9b
+gecos: cmadmin-60c51b9b Admin
+
+
+
+
+dn: uid=hive,ou=People,dc=sp,dc=com
+uid: hive
+cn: hueadmin hueadmin
+sn: hueadmin
+objectClass: person
+objectClass: posixAccount
+objectclass: iNetOrgPerson
+objectClass: top
+objectClass: shadowAccount
+userPassword: e1NTSEE1MTJ9QWhrZ1ZXcEdHZUhoVUVyT040ZEcrRVJIQnppaG9GVFluWnB0RC9
+shadowLastChange: 17566
+shadowMin: 0
+shadowMax: 99999
+shadowWarning: 7
+loginShell: /bin/sh
+uidNumber: 5004
+gidNumber: 5004
+mail: hive@sp.com
+homeDirectory: /home/hive
+gecos: hueadmin hueadmin
+
+
+
+
+dn: uid=hdfs,ou=People,dc=sp,dc=com
+uid: hdfs
+cn: hdfsadmin hdfsadmin
+sn: hdfsadmin
+objectClass: person
+objectClass: posixAccount
+objectclass: iNetOrgPerson
+objectClass: top
+objectClass: shadowAccount
+userPassword: e1NTSEE1MTJ9Mi9jSFpCMWc4bmo4dE9JMzlXNTBaN1ljdDN0QjhzRjJnMUM1OGt
+shadowLastChange: 17566
+shadowMin: 0
+shadowMax: 99999
+shadowWarning: 7
+loginShell: /bin/sh
+uidNumber: 5005
+gidNumber: 5005
+mail: hdfs@sp.com
+homeDirectory: /home/hdfs
+gecos: hdfsadmin hdfsadmin
+
+
+
+
+dn: uid=test,ou=People,dc=sp,dc=com
+uid: test
+cn: test test
+sn: test
+objectClass: person
+objectClass: posixAccount
+objectclass: iNetOrgPerson
+objectClass: top
+objectClass: shadowAccount
+userPassword: e1NTSEE1MTJ9Ui91aXdsanZLQm80RnpwVTVhdmpkd1VCczQ2QUZqQm1CZ0NGdlB
+shadowLastChange: 17566
+shadowMin: 0
+shadowMax: 99999
+shadowWarning: 7
+loginShell: /bin/sh
+uidNumber: 1376400000
+gidNumber: 1376400000
+mail: test@sp.com
+homeDirectory: /home/test
+gecos: test test
+
+
+
+
+dn: uid=shuai,ou=People,dc=sp,dc=com
+uid: shuai
+cn: shuai shuai
+sn: shuai
+objectClass: person
+objectClass: posixAccount
+objectclass: iNetOrgPerson
+objectClass: top
+objectClass: shadowAccount
+userPassword: e1NTSEE1MTJ9WnJFZVMyT1hWSGFiMk5nOXBPamZORlFRbzlSd3I5ejdycDdRSDV
+shadowLastChange: 17566
+shadowMin: 0
+shadowMax: 99999
+shadowWarning: 7
+loginShell: /bin/sh
+uidNumber: 1376400001
+gidNumber: 1376400001
+mail: shuai@sp.com
+homeDirectory: /home/shuai
+gecos: shuai shuai
+
+
+
+
+dn: uid=admin,ou=People,dc=sp,dc=com
+uid: admin
+cn: Administrator
+sn: Administrator
+objectClass: person
+objectClass: posixAccount
+objectclass: iNetOrgPerson
+objectClass: top
+objectClass: shadowAccount
+userPassword: e1NTSEE1MTJ9SC9EQkNrdUdHRUh2UnhORDlLVHFIOVdpUFdUYUphaHpZSk5uSUl
+shadowLastChange: 17566
+shadowMin: 0
+shadowMax: 99999
+shadowWarning: 7
+loginShell: /bin/bash
+uidNumber: 5000
+gidNumber: 5000
+homeDirectory: /home/admin
+gecos: Administrator
+
+
+
+
+dn: uid=cmadmin-60c51b9b,ou=People,dc=sp,dc=com
+uid: cmadmin-60c51b9b
+cn: cmadmin-60c51b9b Admin
+sn: Admin
+objectClass: person
+objectClass: posixAccount
+objectclass: iNetOrgPerson
+objectClass: top
+objectClass: shadowAccount
+shadowLastChange: 17566
+shadowMin: 0
+shadowMax: 99999
+shadowWarning: 7
+loginShell: /bin/sh
+uidNumber: 5003
+gidNumber: 5003
+mail: cmadmin-60c51b9b@sp.com
+homeDirectory: /home/cmadmin-60c51b9b
+gecos: cmadmin-60c51b9b Admin
+
+
+
+
+dn: uid=hive,ou=People,dc=sp,dc=com
+uid: hive
+cn: hueadmin hueadmin
+sn: hueadmin
+objectClass: person
+objectClass: posixAccount
+objectclass: iNetOrgPerson
+objectClass: top
+objectClass: shadowAccount
+userPassword: e1NTSEE1MTJ9QWhrZ1ZXcEdHZUhoVUVyT040ZEcrRVJIQnppaG9GVFluWnB0RC9
+shadowLastChange: 17566
+shadowMin: 0
+shadowMax: 99999
+shadowWarning: 7
+loginShell: /bin/sh
+uidNumber: 5004
+gidNumber: 5004
+mail: hive@sp.com
+homeDirectory: /home/hive
+gecos: hueadmin hueadmin
+
+
+
+
+dn: uid=hdfs,ou=People,dc=sp,dc=com
+uid: hdfs
+cn: hdfsadmin hdfsadmin
+sn: hdfsadmin
+objectClass: person
+objectClass: posixAccount
+objectclass: iNetOrgPerson
+objectClass: top
+objectClass: shadowAccount
+userPassword: e1NTSEE1MTJ9Mi9jSFpCMWc4bmo4dE9JMzlXNTBaN1ljdDN0QjhzRjJnMUM1OGt
+shadowLastChange: 17566
+shadowMin: 0
+shadowMax: 99999
+shadowWarning: 7
+loginShell: /bin/sh
+uidNumber: 5005
+gidNumber: 5005
+mail: hdfs@sp.com
+homeDirectory: /home/hdfs
+gecos: hdfsadmin hdfsadmin
+
+
+
+
+dn: uid=test,ou=People,dc=sp,dc=com
+uid: test
+cn: test test
+sn: test
+objectClass: person
+objectClass: posixAccount
+objectclass: iNetOrgPerson
+objectClass: top
+objectClass: shadowAccount
+userPassword: e1NTSEE1MTJ9Ui91aXdsanZLQm80RnpwVTVhdmpkd1VCczQ2QUZqQm1CZ0NGdlB
+shadowLastChange: 17566
+shadowMin: 0
+shadowMax: 99999
+shadowWarning: 7
+loginShell: /bin/sh
+uidNumber: 1376400000
+gidNumber: 1376400000
+mail: test@sp.com
+homeDirectory: /home/test
+gecos: test test
+
+
+
+
+dn: uid=shuai,ou=People,dc=sp,dc=com
+uid: shuai
+cn: shuai shuai
+sn: shuai
+objectClass: person
+objectClass: posixAccount
+objectclass: iNetOrgPerson
+objectClass: top
+objectClass: shadowAccount
+userPassword: e1NTSEE1MTJ9WnJFZVMyT1hWSGFiMk5nOXBPamZORlFRbzlSd3I5ejdycDdRSDV
+shadowLastChange: 17566
+shadowMin: 0
+shadowMax: 99999
+shadowWarning: 7
+loginShell: /bin/sh
+uidNumber: 1376400001
+gidNumber: 1376400001
+mail: shuai@sp.com
+homeDirectory: /home/shuai
+gecos: shuai shuai
+
+
+

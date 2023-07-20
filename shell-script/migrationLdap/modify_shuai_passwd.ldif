@@ -1,0 +1,6 @@
+
+dn: uid=shuai,ou=People,dc=sp,dc=com
+changetype: modify
+replace: userPassword
+userPassword: 12345678
+

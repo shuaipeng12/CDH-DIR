@@ -1,0 +1,72 @@
+
+dn: cn=admins,ou=Group,dc=sp,dc=com
+objectClass: posixGroup
+objectClass: top
+cn: admins
+userPassword: {crypt}x
+gidNumber: 5000
+memberUid: admin
+
+
+
+dn: cn=editors,ou=Group,dc=sp,dc=com
+objectClass: posixGroup
+objectClass: top
+cn: editors
+userPassword: {crypt}x
+gidNumber: 5002
+
+
+
+
+dn: cn=cmadmin-60c51b9b,ou=Group,dc=sp,dc=com
+objectClass: posixGroup
+objectClass: top
+cn: cmadmin-60c51b9b
+userPassword: {crypt}x
+gidNumber: 5003
+
+
+
+
+dn: cn=hive,ou=Group,dc=sp,dc=com
+objectClass: posixGroup
+objectClass: top
+cn: hive
+userPassword: {crypt}x
+gidNumber: 5004
+
+
+
+
+dn: cn=hdfs,ou=Group,dc=sp,dc=com
+objectClass: posixGroup
+objectClass: top
+cn: hdfs
+userPassword: {crypt}x
+gidNumber: 5005
+
+
+
+
+dn: cn=test,ou=Group,dc=sp,dc=com
+objectClass: posixGroup
+objectClass: top
+cn: test
+userPassword: {crypt}x
+gidNumber: 1376400000
+
+
+
+
+dn: cn=shuai,ou=Group,dc=sp,dc=com
+objectClass: posixGroup
+objectClass: top
+cn: shuai
+userPassword: {crypt}x
+gidNumber: 1376400001
+memberUid: test
+memberUid: hive
+memberUid: admin
+
+

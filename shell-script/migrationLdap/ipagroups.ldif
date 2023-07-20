@@ -1,0 +1,162 @@
+# extended LDIF
+#
+# LDAPv3
+# base <cn=groups,cn=accounts,dc=sp,dc=com> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# groups, accounts, sp.com
+dn: cn=groups,cn=accounts,dc=sp,dc=com
+objectClass: top
+objectClass: nsContainer
+cn: groups
+
+# admins, groups, accounts, sp.com
+dn: cn=admins,cn=groups,cn=accounts,dc=sp,dc=com
+objectClass: top
+objectClass: groupofnames
+objectClass: posixgroup
+objectClass: ipausergroup
+objectClass: ipaobject
+objectClass: nestedGroup
+cn: admins
+description: Account administrators group
+gidNumber: 5000
+member: uid=admin,cn=users,cn=accounts,dc=sp,dc=com
+ipaUniqueID: eb6578da-0cce-11ed-8d8e-00505684bdc6
+memberOf: cn=Replication Administrators,cn=privileges,cn=pbac,dc=sp,dc=com
+memberOf: cn=Add Replication Agreements,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=Modify Replication Agreements,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=Read Replication Agreements,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=Remove Replication Agreements,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=Modify DNA Range,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=Read PassSync Managers Configuration,cn=permissions,cn=pbac,dc=sp
+ ,dc=com
+memberOf: cn=Modify PassSync Managers Configuration,cn=permissions,cn=pbac,dc=
+ sp,dc=com
+memberOf: cn=Read LDBM Database Configuration,cn=permissions,cn=pbac,dc=sp,dc=
+ com
+memberOf: cn=Add Configuration Sub-Entries,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=Read DNA Range,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=Host Enrollment,cn=privileges,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Add krbPrincipalName to a Host,cn=permissions,cn=pbac,dc=
+ sp,dc=com
+memberOf: cn=System: Enroll a Host,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Manage Host Certificates,cn=permissions,cn=pbac,dc=sp,dc=
+ com
+memberOf: cn=System: Manage Host Enrollment Password,cn=permissions,cn=pbac,dc
+ =sp,dc=com
+memberOf: cn=System: Manage Host Keytab,cn=permissions,cn=pbac,dc=sp,dc=com
+memberOf: cn=System: Manage Host Principals,cn=permissions,cn=pbac,dc=sp,dc=co
+ m
+
+# ipausers, groups, accounts, sp.com
+dn: cn=ipausers,cn=groups,cn=accounts,dc=sp,dc=com
+objectClass: top
+objectClass: groupofnames
+objectClass: nestedgroup
+objectClass: ipausergroup
+objectClass: ipaobject
+description: Default group for all users
+cn: ipausers
+ipaUniqueID: eb67a768-0cce-11ed-8e71-00505684bdc6
+member: uid=cmadmin-60c51b9b,cn=users,cn=accounts,dc=sp,dc=com
+member: uid=hive,cn=users,cn=accounts,dc=sp,dc=com
+member: uid=hdfs,cn=users,cn=accounts,dc=sp,dc=com
+member: uid=test,cn=users,cn=accounts,dc=sp,dc=com
+member: uid=shuai,cn=users,cn=accounts,dc=sp,dc=com
+
+# editors, groups, accounts, sp.com
+dn: cn=editors,cn=groups,cn=accounts,dc=sp,dc=com
+objectClass: top
+objectClass: groupofnames
+objectClass: posixgroup
+objectClass: ipausergroup
+objectClass: ipaobject
+objectClass: nestedGroup
+gidNumber: 5002
+description: Limited admins who can edit other users
+cn: editors
+ipaUniqueID: eb68267a-0cce-11ed-a1e5-00505684bdc6
+
+# trust admins, groups, accounts, sp.com
+dn: cn=trust admins,cn=groups,cn=accounts,dc=sp,dc=com
+cn: trust admins
+objectClass: top
+objectClass: groupofnames
+objectClass: ipausergroup
+objectClass: nestedgroup
+objectClass: ipaobject
+member: uid=admin,cn=users,cn=accounts,dc=sp,dc=com
+description: Trusts administrators group
+ipaUniqueID: bc2b87e8-0ccf-11ed-a1ec-00505684bdc6
+
+# cmadmin-60c51b9b, groups, accounts, sp.com
+dn: cn=cmadmin-60c51b9b,cn=groups,cn=accounts,dc=sp,dc=com
+objectClass: posixgroup
+objectClass: ipaobject
+objectClass: mepManagedEntry
+objectClass: top
+cn: cmadmin-60c51b9b
+gidNumber: 5003
+description: User private group for cmadmin-60c51b9b
+mepManagedBy: uid=cmadmin-60c51b9b,cn=users,cn=accounts,dc=sp,dc=com
+ipaUniqueID: ffef74b4-0d8b-11ed-b712-00505684bdc6
+
+# hive, groups, accounts, sp.com
+dn: cn=hive,cn=groups,cn=accounts,dc=sp,dc=com
+objectClass: posixgroup
+objectClass: ipaobject
+objectClass: mepManagedEntry
+objectClass: top
+cn: hive
+gidNumber: 5004
+description: User private group for hive
+mepManagedBy: uid=hive,cn=users,cn=accounts,dc=sp,dc=com
+ipaUniqueID: ece98076-0d90-11ed-9810-00505684bdc6
+
+# hdfs, groups, accounts, sp.com
+dn: cn=hdfs,cn=groups,cn=accounts,dc=sp,dc=com
+objectClass: posixgroup
+objectClass: ipaobject
+objectClass: mepManagedEntry
+objectClass: top
+cn: hdfs
+gidNumber: 5005
+description: User private group for hdfs
+mepManagedBy: uid=hdfs,cn=users,cn=accounts,dc=sp,dc=com
+ipaUniqueID: 9ad21410-0eee-11ed-9c45-00505684bdc6
+
+# test, groups, accounts, sp.com
+dn: cn=test,cn=groups,cn=accounts,dc=sp,dc=com
+objectClass: posixgroup
+objectClass: ipaobject
+objectClass: mepManagedEntry
+objectClass: top
+cn: test
+gidNumber: 1376400000
+description: User private group for test
+mepManagedBy: uid=test,cn=users,cn=accounts,dc=sp,dc=com
+ipaUniqueID: f7cd7140-1b92-11ed-9810-00505684bdc6
+
+# shuai, groups, accounts, sp.com
+dn: cn=shuai,cn=groups,cn=accounts,dc=sp,dc=com
+objectClass: posixgroup
+objectClass: ipaobject
+objectClass: mepManagedEntry
+objectClass: top
+cn: shuai
+gidNumber: 1376400001
+description: User private group for shuai
+mepManagedBy: uid=shuai,cn=users,cn=accounts,dc=sp,dc=com
+ipaUniqueID: 120ceb94-1b93-11ed-9dd2-00505684bdc6
+member: uid=test,cn=users,cn=accounts,dc=sp,dc=com
+member: uid=hive,cn=users,cn=accounts,dc=sp,dc=com
+member: uid=admin,cn=users,cn=accounts,dc=sp,dc=com
+
+search: 2
+result: 0 Success
+
+# numResponses: 11
+# numEntries: 10
