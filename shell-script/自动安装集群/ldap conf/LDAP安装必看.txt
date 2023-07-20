@@ -1,0 +1,25 @@
+
+(1)需要从主节点拷贝到备节点的文件
+1.配置slap主备,需要手动把秘钥证书文件拷贝到备节点:/etc/openldap/certs/
+2.slapd.ldif配置文件
+2.主备目录下创建同步配置文件,放在shell脚本同一目录下:mod_syncprov.ldif,serverid.ldif,syncprov.ldif,sync-ha.ldif
+3.主节点导出的配置文件：config.ldif  【主节点配置同步时导出】
+
+(2)主节点安装顺序
+1.主节点: 先把根域和slap配置文件拷贝到/root/shell/目录下
+2.主节点: 执行slap-master-install.sh脚本
+3.主节点: 把slap配置同步文件拷贝到/root/shell/目录下
+4.主节点: 执行slap-master-sync.sh
+
+(3)备节点安装顺序
+1.备节点: 拷贝slapd.ldif配置文件到/root/shell/目录下
+2.备节点: 执行slap-slave-install.sh
+3.备节点: 拷贝秘钥证书文件到备节点:/etc/openldap/certs/
+3.备节点: 拷贝mod_syncprov.ldif,serverid.ldif,syncprov.ldif,sync-ha.ldif到/root/shell/目录下
+4.备节点: 拷贝config.ldif到/root/shell/目录下，初始化备节点
+4.备节点: 拷贝slap-slave-sync.sh
+
+
+
+ldapsearch -x -D "cn=Manager,dc=fayson,dc=com" -w 123456 -b "uid=xieyx,ou=People,dc=fayson,dc=com"
+sed -i 's/\r$//'  *.sh
