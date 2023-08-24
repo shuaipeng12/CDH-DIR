@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 log_path=/var/log/hive
 session_tmp=/tmp/hive_on_spark_session_tmp.txt
 output=/home/spwork/find_hive_on_spark_result.csv
@@ -31,3 +29,4 @@ done < $session_tmp
 rm -f $session_tmp
 echo "结果文件：${output}"
 echo "解析完成。。。"
+echo "excel转换13位unix时间戳为日期时间格式，使用公式：=TEXT((A1/1000+8*3600)/86400+70*365+19,"yyyy/mm/dd hh:mm:ss.000")"
