@@ -85,3 +85,6 @@ SENTRY_USER_DB_PRIVILEGE_MAP
 库名，表名，角色，用户组，用户，权限
 
 select a.NAME as DB_NAME,b.TBL_NAME,b.RETENTION,b.OWNER,b.OWNER_TYPE,a.OWNER_TYPE,r.ROLE_NAME,t.GRANTOR,t.GRANTOR_TYPE,t.TBL_PRIV from DBS as a left JOIN TBLS as b on a.DB_ID=b.DB_ID left JOIN ROLES as r on r.OWNER_NAME=a.OWNER_NAME left JOIN TBL_PRIVS as t on t.TBL_ID=b.TBL_ID;
+
+
+# mysql 和 oracle 语句在线转换：https://www.sqlines.com/online
