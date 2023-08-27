@@ -1,5 +1,6 @@
 import re
 from datetime import datetime
+
 # 输入和输出文件路径
 input_log_file = r"C:\Users\帅鹏\Desktop\hadoop-cmf-hive-HIVESERVER2-hadoop01.macro.com.log.out"
 output_file = r"C:\Users\帅鹏\Desktop\find_hive_on_spark.txt"
@@ -191,8 +192,9 @@ def main():
             query_id = sql_line[0].split("): ")[0]
             sql = sql_line[0].split("): ")[-1]
 
-        message = f"{formatted_datetime},{user},{queue},{application_id},{query_id},{sql}\n"
-        fw.write(message)
+        if queue == "root.default":
+            message = f"{formatted_datetime},{user},{queue},{application_id},{query_id},{sql}\n"
+            fw.write(message)
     fw.close()
 
 
