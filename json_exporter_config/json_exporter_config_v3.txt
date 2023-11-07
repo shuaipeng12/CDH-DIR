@@ -1,0 +1,19 @@
+modules:
+  default:
+    headers:
+      MyHeader: MyHeaderValue
+
+    metrics:
+    - name: time
+      type: object
+      help: General statistics of the top cryptocurrencies
+      path: '{.queries[*]}'
+      labels:
+        id: '{.queryId}'
+        user: '{.user}'
+        query_type: '{.queryType}'
+        query_state: '{.queryState}'
+        query_status: '{.attributes.query_status}'
+      values:
+        client_fetch_wait_time: '{.attributes.client_fetch_wait_time}'
+		durationMillis: '{.durationMillis}'

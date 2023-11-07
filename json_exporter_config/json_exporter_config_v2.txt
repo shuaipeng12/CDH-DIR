@@ -1,0 +1,95 @@
+modules:
+  default:
+    headers:
+      MyHeader: MyHeaderValue
+
+    metrics:
+    - name: time
+      type: object
+      help: General statistics of the top cryptocurrencies
+      path: '{.queries[*]}'
+      labels:
+        id: '{.queryId}'
+		user: '{.user}'
+      values:
+        client_fetch_wait_time: '{.attributes.client_fetch_wait_time}'
+		durationMillis: '{.durationMillis}'
+
+		
+    - name: query_type_ddl
+      type: object
+      help: General statistics of the top cryptocurrencies
+      path: '{.queries[?(@.queryType == "DDL")]}'
+      labels:
+        id: '{.queryId}'
+		user: '{.user}'
+        DDL: '{.queryType}'
+      values:
+        DDL: 1
+		
+    - name: query_type_query
+      type: object
+      help: General statistics of the top cryptocurrencies
+      path: '{.queries[?(@.queryType == "QUERY")]}'
+      labels:
+        id: '{.queryId}'
+		user: '{.user}'
+        QUERY: '{.queryType}'
+      values:
+        QUERY: 2
+		
+    - name: query_type_na
+      type: object
+      help: General statistics of the top cryptocurrencies
+      path: '{.queries[?(@.queryType == "N/A")]}'
+      labels:
+        id: '{.queryId}'
+		user: '{.user}'
+        NA: '{.queryType}'
+      values:
+        NA: 3
+		
+
+    - name: query_state_finished
+      type: object
+      help: General statistics of the top cryptocurrencies
+      path: '{.queries[?(@.queryState == "FINISHED")]}'
+      labels:
+        id: '{.queryId}'
+		user: '{.user}'
+        state: '{.queryState}'
+      values:
+        state: 1
+		
+    - name: query_state_exception
+      type: object
+      help: General statistics of the top cryptocurrencies
+      path: '{.queries[?(@.queryState == "EXCEPTION")]}'
+      labels:
+        id: '{.queryId}'
+		user: '{.user}'
+        state: '{.queryState}'
+      values:
+        state: 0
+		
+    - name: query_status_ok
+      type: object
+      help: General statistics of the top cryptocurrencies
+      path: '{.queries.attributes[?(@.query_status == "OK")]}'
+      labels:
+        id: '{.queryId}'
+		user: '{.user}'
+        status: '{.queries.attributes.query_status}'
+      values:
+        status: 1
+		
+    - name: query_status_not_ok
+      type: object
+      help: General statistics of the top cryptocurrencies
+      path: '{.queries.attributes[?(@.query_status != "OK")]}'
+      labels:
+        id: '{.queryId}'
+		user: '{.user}'
+        status: '{.queries.attributes.query_status}'
+      values:
+        status: 0
