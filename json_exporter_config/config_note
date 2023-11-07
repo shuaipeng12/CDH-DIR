@@ -1,0 +1,26 @@
+https://github.com/prometheus-community/json_exporter/issues/134
+https://blog.csdn.net/qq_40915967/article/details/112917019#:~:text=%2F%2A%2A%20%2A%20%40param%20strTime%20%E7%A4%BA%E4%BE%8B%3A%222020-01-01%2023%3A59%3A59%22%20%2A%20%40return,%3D%20Calendar.getInstance%20%28%29%3B%20calendar.setTime%20%28isoDate%29%3B%20calendar.add%20%28Calendar.HOUR%2C%208%29%3B%2F%2FISO-8601%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E7%9A%84%E8%BD%AC%E6%88%90%E4%B8%AD%E5%9B%BD%E6%A0%87%E5%87%86%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E7%9A%84%2C%E9%9C%80%E8%A6%81%E5%8A%A0%E4%B8%8A8%E4%B8%AA%E5%B0%8F%E6%97%B6.
+http://erdong.site/prometheus-notes/chapter03-Exporter/3.34-json-exporter.html
+
+
+将 2023年11月7日12:00:00 转换为 ISO 8601 格式。
+根据 ISO 8601，日期和时间的表示方法如下：
+
+日期部分：YYYY-MM-DD
+时间部分：hh:mm:ss.sss
+时区部分：Z 或 ±hh:mm（表示距离 UTC 的时区）
+因此，我们将按照这个格式进行转换：
+
+首先，将日期和时间分开：
+
+日期：2023年11月7日
+时间：12:00:00
+将时间转换为 24 小时制：
+
+时间：12:00:00
+将日期和时间组合起来：
+
+ISO 8601 格式：2023-11-07T12:00:00Z
+因此，2023年11月7日12:00:00 的 ISO 8601 格式为 2023-11-07T12:00:00Z。12
+
+请注意，“Z” 表示世界标准时间（UTC）。如果您需要转换到特定时区，请相应地调整时间部分。
